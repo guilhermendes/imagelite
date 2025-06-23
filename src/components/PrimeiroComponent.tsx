@@ -1,15 +1,19 @@
 'use client'
 
-export function PrimeiroComponent() {
+interface PrimeiroComponentProps{
+    mensagem?: string;
+    mensagemDoBotao?: string;
+}
+
+export const PrimeiroComponent: React.FC<PrimeiroComponentProps> = (props: PrimeiroComponentProps) => {
 
     function hanleClick() {
-        console.log('clique no botao');
+        console.log(props.mensagemDoBotao);
     }
 
     return (
         <div>
-            Meu Primeiro Componente!
-
+            { props.mensagem }
             <button onClick={hanleClick}> clique aqui!</button>
         </div>
     )

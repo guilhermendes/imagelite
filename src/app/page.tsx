@@ -2,8 +2,15 @@ import { PrimeiroComponent, ArrowFunction } from '../components/PrimeiroComponen
 export default function Home() {
   return (
     <>
-      <PrimeiroComponent />
+      <PrimeiroComponent 
+          mensagem='mensagem component' 
+          mensagemDoBotao='clicou aqui ' />
+
+      <PrimeiroComponent 
+          mensagem='novo component' 
+          mensagemDoBotao='clicou aqui tambem' />
       <ArrowFunction />
     </>
   )
 }
+
